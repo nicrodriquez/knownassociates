@@ -16,7 +16,7 @@
 		background-position: center bottom;
 		background-attachment: fixed;
 		font-family: 'avenir', sans-serif;
-		color: rgba(180, 180, 180, 1);
+		color: rgba(225, 225, 225, 1);
 		padding: 0;
 		margin: 0;
 		
@@ -100,13 +100,20 @@
 	}
 	@media (max-width: 599px) {
 		  .container{
-			width: 80vw;
+			width: 100vw;
+			padding: 0;
+			}
+			.header{
+				background-image: url('images/ka_bg.jpg');
+				background-size: cover;
 			}
 			body{
 				font-size: 140%;
-				background-position: center center;
-				background-attachment: fixed;
+				background-image: none;
 			}
+			.content{
+					padding:  4vh 8.5vw;
+				}
 			.sig{
 				margin: 2.5vh 0;
 			}
@@ -123,7 +130,9 @@
 <body>
 	
 	<div class="container">
-		<div class="header"><img class="logo" src="images/ka.svg"/></div>		
+		<div class="header">
+			<img class="logo" src="images/ka.svg"/>
+		</div>		
 		<div class="content">
 			<p>We are a balance of passion, intellect, and humility. Driven by the first, molded by the second and united by the third.</p>
 			<p>We are each a part of a creative body and we collectively belong to an all-powerful transcendent force that we seek to know and learn from.</p>
