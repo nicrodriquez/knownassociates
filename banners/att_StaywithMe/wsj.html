@@ -16,8 +16,12 @@
 
 	}
 	#iframe1{
-/* 		height: 160px; */
+ 		height: 160px;
 	}
+	
+	.ad-wrapper iframe {pointer-events: none}
+	
+	.ad-wrapper.expanded iframe {pointer-events: auto}
 	
 </style>
 
@@ -31,7 +35,7 @@
 
 <section  style="margin: 0 auto">
 	
-	<div id="trigger">
+	<div id="trigger" class="ad-wrapper">
 		<iframe width="1280px" id="iframe1" marginheight="0" frameborder="0" src="http://known.associates/banners/att_StaywithMe/index.html" scrolling="no" target="_parent" ></iframe>
 		</div>
 	
@@ -46,9 +50,10 @@
 
 $( document ).ready(function() {
        
-       $("#trigger").click( function(){
+       $(".ad-wrapper").click( function(){
           //alert("something is working.");
           $("#iframe1").animate({height:534}, 500);
+		  $( this ).addClass( "expanded" );
         });
 
 });
