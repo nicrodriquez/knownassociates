@@ -10,8 +10,30 @@
 	section{
 		text-align: center;
 	}
+	iframe{
+		background: #222;
+	}
 	
 </style>
+
+
+<script language="JavaScript">
+<!--
+function autoResize(id){
+    var newheight;
+    var newwidth;
+
+    if(document.getElementById){
+        newheight=document.getElementById(id).contentWindow.document .body.scrollHeight;
+        newwidth=document.getElementById(id).contentWindow.document .body.scrollWidth;
+    }
+
+    document.getElementById(id).height= (newheight) + "px";
+    document.getElementById(id).width= (newwidth) + "px";
+}
+//-->
+</script>
+
 
 </head>
 <body>
@@ -21,23 +43,13 @@
 
 <section style="margin: 0 auto">
 	
-	<iframe id='frame_name_here' width="1280" src="index.html"></iframe>
+	<iframe width="1200px" height="160px" id="iframe1" marginheight="0" frameborder="0" onLoad="autoResize('iframe1');" src="index.html"></iframe>
 	
 </section>
 
 <section>
 	<img style="width: 100%" src="WSJ_4_10_bodycopy.jpg"/>
 </section>
-
-<script>
-  // Resize iframe to full height
-  function resizeIframe(height)
-  {
-    // "+60" is a general rule of thumb to allow for differences in
-    // IE & and FF height reporting, can be adjusted as required..
-    document.getElementById('frame_name_here').height = parseInt(height)+60;
-  }
-</script>
 
 
 </body>
