@@ -115,7 +115,8 @@ var y=function(a){var b=a.getAttribute("sources");b=b?b.split(","):[];for(var c;
 </script>
 </head>
 
-<body class="document-body gwd-body" style="margin: 0 auto">
+
+<body class="document-body gwd-body" style="margin: 0 auto" onload="iframeResizePipe()">
  
   <gwd-doubleclick id="gwd-ad" polite-load="">
     <gwd-metric-configuration>
@@ -221,7 +222,22 @@ var y=function(a){var b=a.getAttribute("sources");b=b?b.split(","):[];for(var c;
     <gwd-exit metric="1_1" url="http://business.att.com"></gwd-exit>
   </gwd-doubleclick>
   
- 
+ <iframe id="helpframe" src='' height='0' width='0' frameborder='0'></iframe>
+
+<script type="text/javascript">
+  function iframeResizePipe()
+  {
+     // What's the page height?
+     var height = document.body.scrollHeight;
+
+     // Going to 'pipe' the data to the parent through the helpframe..
+     var pipe = document.getElementById('helpframe');
+
+     // Cachebuster a precaution here to stop browser caching interfering
+     pipe.src = 'http://www.foo.com/helper.html?height='+height+'&cacheb='+Math.random();
+
+  }
+</script>
  
  
   <script type="text/javascript" id="gwd-init-code">

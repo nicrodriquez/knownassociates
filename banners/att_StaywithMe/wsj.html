@@ -1,14 +1,27 @@
 <html>
 <head>	
+
+<style>
+	
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	section{
+		text-align: center;
+	}
+	
+</style>
+
 </head>
 <body>
 <section>
 	<img style="width: 100%" src="WSJ_4_10_header.png"/>
 </section>
 
-<section style="margin: 0 auto; text-align: center">
+<section style="margin: 0 auto">
 	
-	<iframe width="1280" src="index.html"></iframe>
+	<iframe id='frame_name_here' width="1280" src="index.html"></iframe>
 	
 </section>
 
@@ -16,21 +29,14 @@
 	<img style="width: 100%" src="WSJ_4_10_bodycopy.jpg"/>
 </section>
 
-<script type="application/javascript">
-
-function resizeIFrameToFitContent( iFrame ) {
-
-    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
-}
-
-window.addEventListener('DOMContentLoaded', function(e) {
-    var iframes = document.querySelectorAll("iframe");
-    for( var i = 0; i < iframes.length; i++) {
-        resizeIFrameToFitContent( iframes[i] );
-    }
-} );
-
+<script>
+  // Resize iframe to full height
+  function resizeIframe(height)
+  {
+    // "+60" is a general rule of thumb to allow for differences in
+    // IE & and FF height reporting, can be adjusted as required..
+    document.getElementById('frame_name_here').height = parseInt(height)+60;
+  }
 </script>
 
 
