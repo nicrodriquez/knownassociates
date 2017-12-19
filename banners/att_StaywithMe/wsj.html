@@ -10,9 +10,12 @@
 	section{
 		text-align: center;
 	}
-	#iframe1{
+	iframe{
 		background: #222;
-		height: 160px;
+
+	}
+	#iframe1{
+/* 		height: 160px; */
 	}
 	
 </style>
@@ -21,13 +24,15 @@
 
 </head>
 <body>
-<section id="gwd">
+<section>
 	<img style="width: 100%" src="WSJ_4_10_header.png"/>
 </section>
 
 <section  style="margin: 0 auto">
 	
-	<iframe width="1280px" id="iframe1" marginheight="0" frameborder="0" src="index.html" scrolling="no" target="_parent" ></iframe>
+	<div id="trigger">
+		<iframe width="1280px" id="iframe1" marginheight="0" frameborder="0" src="index.html" scrolling="no" target="_parent" ></iframe>
+		</div>
 	
 </section>
 
@@ -40,9 +45,7 @@
 
 $( document ).ready(function() {
        
-       
-         
-       $("#gwd").click( function(){
+       $("#trigger").click( function(){
           //alert("something is working.");
           $("#iframe1").animate({height:534}, 500);
         });
