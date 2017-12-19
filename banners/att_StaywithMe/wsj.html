@@ -1,0 +1,39 @@
+<html>
+<head>	
+</head>
+<body>
+<section>
+	<img style="width: 100%" src="WSJ_4_10_header.png"/>
+</section>
+
+<section style="margin: 0 auto; text-align: center">
+	
+	<iframe width="1280" src="index.html"></iframe>
+	
+</section>
+
+<section>
+	<img style="width: 100%" src="WSJ_4_10_bodycopy.jpg"/>
+</section>
+
+<script type="application/javascript">
+
+function resizeIFrameToFitContent( iFrame ) {
+
+    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+}
+
+window.addEventListener('DOMContentLoaded', function(e) {
+    var iframes = document.querySelectorAll("iframe");
+    for( var i = 0; i < iframes.length; i++) {
+        resizeIFrameToFitContent( iframes[i] );
+    }
+} );
+
+</script>
+
+
+</body>
+
+</html>
