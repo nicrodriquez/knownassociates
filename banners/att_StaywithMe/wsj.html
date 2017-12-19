@@ -19,9 +19,11 @@
  		height: 160px;
 	}
 	
-	.ad-wrapper iframe {pointer-events: none}
+/*
+	.ad-wrapper iframe{pointer-events: none}
 	
 	.ad-wrapper.expanded iframe {pointer-events: auto}
+*/
 	
 </style>
 
@@ -50,11 +52,18 @@
 
 $( document ).ready(function() {
        
+/*
        $(".ad-wrapper").click( function(){
-          //alert("something is working.");
+          alert("something is working.");
           $("#iframe1").animate({height:534}, 500);
+          
 		  $( this ).addClass( "expanded" );
         });
+*/
+	
+	$('iframe').contents().find('gwd-taparea').click(function() {
+	    alert('click');
+	});
 
 });
 
