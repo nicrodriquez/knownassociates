@@ -27,25 +27,25 @@
 </head>
 <body>
 <section>
-	<img style="width: 100%" src="http://known.associates/banners/att_StaywithMe/WSJ_4_10_header.png"/>
+	<img style="width: 100%" src="WSJ_4_10_header.png"/>
 </section>
 
 <section  style="margin: 0 auto">
 	
 	<div id="trigger" class="ad-wrapper">
-		<iframe width="1280px" id="iframe1" marginheight="0" frameborder="0" src="http://known.associates/banners/att_StaywithMe/index.html" scrolling="no" target="_parent" ></iframe>
+		<iframe width="1280px" id="iframe1" marginheight="0" frameborder="0" src="index.html" scrolling="no" target="_parent" ></iframe>
 		</div>
 	
 </section>
 
 <section>
-	<img style="width: 100%" src="http://known.associates/banners/att_StaywithMe/WSJ_4_10_bodycopy.jpg"/>
+	<img style="width: 100%" src="WSJ_4_10_bodycopy.jpg"/>
 </section>
 
 <script type="text/javascript">
 
 
-$('iframe#iframe1').load(function() {
+$(document).ready(function() {
        
 /*
        $(".ad-wrapper").click( function(){
@@ -55,17 +55,27 @@ $('iframe#iframe1').load(function() {
 		  $( this ).addClass( "expanded" );
         });
 */
+	$('#iframe1').on('load', function(){
+
+        var iframe = $('#iframe1').contents();
+
+        iframe.find("gwd-taparea#bg-col-exit").click(function(){
+               alert("test");
+	        });
+	});
+/*
 	
-	$('iframe#iframe1').contents().find('gwd-taparea#bg-col-exit').click(function() {
+	$('iframe').contents().find('gwd-taparea#bg-col-exit').click(function() {
 	    alert('something was clicked');
 	    $("#iframe1").animate({height:534}, 500);
 	});
 	
 	
-	$('iframe#iframe1').contents().find('gwd-taparea#close_banner_3').click(function() {
+	$('iframe').contents().find('gwd-taparea#close_banner_3').click(function() {
 	    alert('something was clicked');
 	    $("#iframe1").animate({height:160}, 500);
 	});
+*/
 
 });
 
