@@ -19,15 +19,10 @@
  		height: 160px;
 	}
 	
-/*
-	.ad-wrapper iframe{pointer-events: none}
-	
-	.ad-wrapper.expanded iframe {pointer-events: auto}
-*/
 	
 </style>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -50,7 +45,7 @@
 <script type="text/javascript">
 
 
-$( document ).ready(function() {
+$('iframe#iframe1').load(function() {
        
 /*
        $(".ad-wrapper").click( function(){
@@ -61,12 +56,14 @@ $( document ).ready(function() {
         });
 */
 	
-	$('iframe').contents().find('gwd-taparea#bg-col-exit').click(function() {
+	$('iframe#iframe1').contents().find('gwd-taparea#bg-col-exit').click(function() {
+	    alert('something was clicked');
 	    $("#iframe1").animate({height:534}, 500);
 	});
 	
 	
-	$('iframe').contents().find('gwd-taparea#close_banner_3').click(function() {
+	$('iframe#iframe1').contents().find('gwd-taparea#close_banner_3').click(function() {
+	    alert('something was clicked');
 	    $("#iframe1").animate({height:160}, 500);
 	});
 
