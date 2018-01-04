@@ -53,13 +53,13 @@ $(document).ready(function() {
 		  $( this ).addClass( "expanded" );
         });
 */
-	$('#iframe1').on('load', function(){
+	$('iframe').on('load', function(){
 
-        var iframe = $('iframe#iframe1').contents();
+        var iframe = $('#iframe1').contents();
 
         iframe.find("gwd-taparea#bg-col-exit").click(function(){
                alert("test");
-               //$("#iframe1").animate({height:534}, 500);
+               //$(this).animate({height:534}, 500);
 	        });
 	        
 	    //iframe.find("gwd-taparea#close_banner_3").click(function(){
