@@ -8,16 +8,7 @@
   <style data-exports-type="gwd-taparea" data-gwd-node="true">gwd-taparea{display:block;cursor:pointer;background-color:rgba(0,0,0,0);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}</style>
   <style data-exports-type="gwd-video" data-gwd-node="true">.has-fullscreen-gwd-video{width:100%!important;height:100%!important;top:0!important;left:0!important;margin:0!important;padding:0!important;border:none !important}</style>
   
-
-
-
-
-
-
-
-
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script data-source="googbase_min.js" data-version="4" data-exports-type="googbase">(function(){(window.goog=window.goog||{}).inherits=function(a,d){function b(){}b.prototype=d.prototype;a.b=d.prototype;a.prototype=new b;a.prototype.constructor=a;a.a=function(a,b,f){for(var e=Array(arguments.length-2),c=2;c<arguments.length;c++)e[c-2]=arguments[c];return d.prototype[b].apply(a,e)}};}).call(this);
 </script>
@@ -38,6 +29,7 @@
 
 </script>
   <script data-source="https://s0.2mdn.net/ads/studio/Enabler.js" data-exports-type="gwd-doubleclick" type="text/javascript" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+  
   <meta name="generator" content="Google Web Designer 2.0.2.1128">
   <meta data-template-name="gwd-DCRM_GWD_IAB_Expandable_728x90_728x315">
   <meta name="template" content="Expandable 2.0.16">
@@ -113,9 +105,45 @@ d.attributeChangedCallback=function(a){if("sources"==a){var b=this.paused,c=this
 d.gwdIsLoaded=function(){return this.m};d.mute=function(){this.c&&(this.volume=1);this.c=!1;this.muted=!this.muted};d.replay=function(){this.seek(0);this.play()};d.seek=function(a){this.currentTime=a};d.w=function(){!1===this.h&&!0===this.muted&&0===this.i&&(this.volume=1,this.muted=!1);this.i=this.volume;this.h=this.muted};d.setVolume=function(a){this.muted=0<a?!1:!0;this.i=this.volume=a/100;this.h=this.muted};d.setSources=function(a){this.setAttribute("sources",a)};
 var y=function(a){var b=a.getAttribute("sources");b=b?b.split(","):[];for(var c;c=a.firstChild;)a.removeChild(c);for(c=0;c<b.length;++c){var e=document.createElement("source"),g=e;var f=b[c];f=f.trim();f=window.Enabler?Enabler.getUrl(f):f;g.src=f;a.appendChild(e)}};document.registerElement("gwd-video",{prototype:x.prototype,"extends":"video"});}).call(this);
 </script>
+	
+<style>
+	
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	section{
+		text-align: center;
+		position: relative;
+		z-index: 100;
+	}
+	
+	iframe{
+		background: #000;
+
+	}
+	#iframe1{
+ 		height: 160px;
+	}
+	.gwd-page-container{
+		height: 160px;
+	}
+	section.ad{
+		width: 1280px;
+		margin: 0 auto;
+		display: block;
+		z-index: 1;
+	}
+	
+</style>
+	
 </head>
 
 <body class="document-body gwd-body">
+	 <section class="navigation">
+	<img style="width: 100%" src="WSJ_4_10_header.png"/>
+</section>
+ <section class="ad"> 
   <gwd-doubleclick id="gwd-ad" polite-load="">
     <gwd-metric-configuration>
       <gwd-metric-event source="bg-col-exit" event="tapareaexit" metric="" exit="Exit"></gwd-metric-event>
@@ -218,7 +246,12 @@ var y=function(a){var b=a.getAttribute("sources");b=b?b.split(","):[];for(var c;
     <gwd-exit metric="2" url="http://business.att.com"></gwd-exit>
     <gwd-exit metric="3" url="http://business.att.com"></gwd-exit>
     <gwd-exit metric="1_1" url="http://business.att.com"></gwd-exit>
-  </gwd-doubleclick>
+  </gwd-doubleclick></section>
+  
+   <section>
+	<img style="width: 100%" src="WSJ_4_10_bodycopy.jpg"/>
+</section>
+  
   <script type="text/javascript" id="gwd-init-code">
     (function() {
 
@@ -265,6 +298,30 @@ var y=function(a){var b=a.getAttribute("sources");b=b?b.split(","):[];for(var c;
     })();
   </script>
 
+
+  
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+       
+	
+	$('gwd-taparea#bg-col-exit').click(function() {
+	   // alert('something was clicked');
+	    $(".gwd-page-container").animate({height:534}, 600);
+	});
+	
+	
+
+	$('gwd-taparea#close_banner_3').click(function() {
+	    $(".gwd-page-container").animate({height:160}, 300);
+	});
+
+
+
+});
+
+</script>
 
 <script data-exports-type="gwd-studio-registration">function StudioExports() {
 Enabler.setExpandingPixelOffsets(0,0,1280,534,false,false);
