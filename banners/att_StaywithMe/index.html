@@ -114,45 +114,10 @@ d.gwdIsLoaded=function(){return this.m};d.mute=function(){this.c&&(this.volume=1
 var y=function(a){var b=a.getAttribute("sources");b=b?b.split(","):[];for(var c;c=a.firstChild;)a.removeChild(c);for(c=0;c<b.length;++c){var e=document.createElement("source"),g=e;var f=b[c];f=f.trim();f=window.Enabler?Enabler.getUrl(f):f;g.src=f;a.appendChild(e)}};document.registerElement("gwd-video",{prototype:x.prototype,"extends":"video"});}).call(this);
 </script>
 
-<style>
-	
-	*{
-		margin: 0;
-		padding: 0;
-	}
-	section{
-		text-align: center;
-		position: relative;
-		z-index: 100;
-	}
-	
-	iframe{
-		background: #000;
 
-	}
-	#iframe1{
- 		height: 160px;
-	}
-	.gwd-page-container{
-		height: 160px;
-	}
-	section.ad{
-		width: 1280px;
-		margin: 0 auto;
-		display: block;
-		z-index: 1;
-	}
-	
-</style>
 
 </head>
-
-
-<body class="document-body gwd-body" style="margin: 0 auto">
- <section class="navigation">
-	<img style="width: 100%" src="WSJ_4_10_header.png"/>
-</section>
- <section class="ad"> <gwd-doubleclick id="gwd-ad" polite-load="">
+<gwd-doubleclick id="gwd-ad" polite-load="">
     <gwd-metric-configuration>
       <gwd-metric-event source="bg-col-exit" event="tapareaexit" metric="" exit="Exit"></gwd-metric-event>
       <gwd-metric-event source="first-respond" event="tapareaexit" metric="" exit="Exit"></gwd-metric-event>
@@ -254,16 +219,9 @@ var y=function(a){var b=a.getAttribute("sources");b=b?b.split(","):[];for(var c;
     <gwd-exit metric="2" url="http://business.att.com"></gwd-exit>
     <gwd-exit metric="3" url="http://business.att.com"></gwd-exit>
     <gwd-exit metric="1_1" url="http://business.att.com"></gwd-exit>
-  </gwd-doubleclick></section>
-  
-  <section>
-	<img style="width: 100%" src="WSJ_4_10_bodycopy.jpg"/>
-</section>
-  
- <iframe id="helpframe" src='' height='0' width='0' frameborder='0'></iframe>
-
-
+  </gwd-doubleclick>
  
+
  
   <script type="text/javascript" id="gwd-init-code">
     (function() {
@@ -310,29 +268,6 @@ var y=function(a){var b=a.getAttribute("sources");b=b?b.split(","):[];for(var c;
         handleAdInitialized, false);
     })();
   </script>
-
-<script type="text/javascript">
-
-
-$(document).ready(function() {
-       
-	
-	$('gwd-taparea#bg-col-exit').click(function() {
-	   // alert('something was clicked');
-	    $(".gwd-page-container").animate({height:534}, 600);
-	});
-	
-	
-
-	$('gwd-taparea#close_banner_3').click(function() {
-	    $(".gwd-page-container").animate({height:160}, 300);
-	});
-
-
-
-});
-
-</script>
 
 <script data-exports-type="gwd-studio-registration">function StudioExports() {
 Enabler.setExpandingPixelOffsets(0,0,1280,534,false,false);
