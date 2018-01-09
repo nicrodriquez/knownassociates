@@ -21,6 +21,7 @@
     <script data-source="gwddoubleclick_min.js" data-version="14" data-exports-type="gwd-doubleclick" src="gwddoubleclick_min.js"></script><script data-source="gwdimage_min.js" data-version="9" data-exports-type="gwd-image" src="gwdimage_min.js"></script><script data-source="gwdtaparea_min.js" data-version="4" data-exports-type="gwd-taparea" src="gwdtaparea_min.js"></script>
       <script data-source="gwdvideo_min.js" data-version="8" data-exports-type="gwd-video" src="gwdvideo_min.js"></script>
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="jquery.lazyloadxt.extra.min.js"></script>
 	  <style>
 	
 		*{
@@ -95,7 +96,7 @@
       </div>
       <div is="gwd-page" id="expanded-page" data-gwd-name="Expanded page" class="gwd-page-wrapper expanded gwd-lightbox gwd-div-xhti gwd-div-1ti4" data-gwd-width="1280px" data-gwd-height="534px" expanded="">
         <div class="gwd-page-content expanded gwd-div-e0e9">
-          <video is="gwd-video" id="gwd-video_1" sources="Initial_Crash.mp4" class="gwd-video-vrj1 gwd-gen-1ujcgwdanimation" poster="Initial_Crash_0000.png" autoplay=""></video>
+          <video is="gwd-video" id="gwd-video_1" data-sources="Initial_Crash.mp4" class="gwd-video-vrj1 gwd-gen-1ujcgwdanimation" data-poster="Initial_Crash_0000.png" autoplay=""></video>
           <img is="gwd-image" source="web_assets-03.png" id="first" class="gwd-img-1bxp gwd-img-jswp gwd-gen-sbjrgwdanimation">
           <img is="gwd-image" source="web_assets-04.png" id="er" class="gwd-img-ognf gwd-img-zdv6 gwd-gen-1fffgwdanimation">
           <img is="gwd-image" source="web_assets-05.png" id="recovery" class="gwd-img-182i gwd-img-1ncf gwd-gen-y2xmgwdanimation">
@@ -115,7 +116,7 @@
       </div>
       <div is="gwd-page" id="expanded-page_1" data-gwd-name="first-respond" class="gwd-page-wrapper expanded gwd-lightbox gwd-div-xhti gwd-div-1szb" data-gwd-width="1280px" data-gwd-height="534px" expanded="">
         <div class="gwd-page-content expanded gwd-div-e0e9">
-          <video is="gwd-video" id="first-respond-vid" sources="first_responders.mp4" class="gwd-video-14xu" poster="first_responders_00000.png" autoplay=""></video>
+          <video is="gwd-video" id="first-respond-vid" data-sources="first_responders.mp4" class="gwd-video-14xu" data-poster="first_responders_00000.png" autoplay=""></video>
           <img is="gwd-image" source="web_assets-03.png" id="first_1" class="gwd-img-1bxp gwd-img-1i7t gwd-gen-14zagwdanimation">
           <img is="gwd-image" source="web_assets-04.png" id="er_" class="gwd-img-ognf gwd-img-4pzz gwd-gen-9y77gwdanimation">
           <img is="gwd-image" source="web_assets-05.png" id="recovery_1" class="gwd-img-182i gwd-img-136d gwd-gen-1e14gwdanimation">
@@ -135,7 +136,7 @@
       </div>
       <div is="gwd-page" id="expanded-page_2" data-gwd-name="operating_rm" class="gwd-page-wrapper expanded gwd-lightbox gwd-div-xhti gwd-div-1jj2" data-gwd-width="1280px" data-gwd-height="534px" expanded="">
         <div class="gwd-page-content expanded gwd-div-e0e9">
-          <video is="gwd-video" id="operating_vid" sources="operating_room.mp4" class="gwd-video-rzmu" poster="operating_room_00000.png" autoplay=""></video>
+          <video is="gwd-video" id="operating_vid" data-sources="operating_room.mp4" class="gwd-video-rzmu" data-poster="operating_room_00000.png" autoplay=""></video>
           <img is="gwd-image" source="web_assets-03.png" id="first_2" class="gwd-img-1bxp gwd-img-1i7t gwd-gen-lft2gwdanimation">
           <img is="gwd-image" source="web_assets-04.png" id="er__1" class="gwd-img-ognf gwd-img-4pzz gwd-gen-1x27gwdanimation">
           <img is="gwd-image" source="web_assets-05.png" id="recovery_2" class="gwd-img-182i gwd-img-136d gwd-gen-vlewgwdanimation">
@@ -155,7 +156,7 @@
       </div>
       <div is="gwd-page" id="expanded-page_3" data-gwd-name="recovery" class="gwd-page-wrapper expanded gwd-lightbox gwd-div-xhti gwd-div-sn0k" data-gwd-width="1280px" data-gwd-height="534px" expanded="">
         <div class="gwd-page-content expanded gwd-div-e0e9">
-          <video is="gwd-video" id="recovery_vid" sources="recovery.mp4" class="gwd-video-wzxj" poster="recovery_00000.png" autoplay=""></video>
+          <video is="gwd-video" id="recovery_vid" data-sources="recovery.mp4" class="gwd-video-wzxj" data-poster="recovery_00000.png" autoplay=""></video>
           <img is="gwd-image" source="web_assets-03.png" id="first_3" class="gwd-img-1bxp gwd-img-1i7t gwd-gen-ghk8gwdanimation">
           <img is="gwd-image" source="web_assets-04.png" id="er__2" class="gwd-img-ognf gwd-img-4pzz gwd-gen-1vr8gwdanimation">
           <img is="gwd-image" source="web_assets-05.png" id="recovery_3" class="gwd-img-182i gwd-img-136d gwd-gen-y1a6gwdanimation">
@@ -239,7 +240,7 @@ $(document).ready(function() {
 	
 	$('gwd-taparea#bg-col-exit').click(function() {
 	   // alert('something was clicked');
-	    $(".gwd-page-container").animate({height:534}, 600);
+	    $(".gwd-page-container").animate({height:534}, 1500);
 	});
 	
 	
